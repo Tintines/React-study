@@ -12,6 +12,7 @@ npm start
 * style标签双括号 style={{display:'none'}}
 * 在a标签中临时改成锚点 href='#1'
 * 成型的第三方库 要放到public中
+* img标签中要有alt属性
 
 a.遇到 <开头的代码, 以标签的语法解析: html同名标签转换为html同名元素, 其它标签需要特别解析
 b.遇到以 { 开头的代码，以JS语法解析: 标签中的js表达式必须用{ }包含
@@ -36,3 +37,10 @@ JSX 执行更快，因为它在编译为 JavaScript 代码后进行了优化；
 
 ## 在数据不通过数据库添加唯一ID前,自己手动通过uuid添加生成唯一标识
 yarn add uuid
+
+### 完美解决Git推送远程报错问题
+fatal: unable to access 'https://github.com/Tintines/React-study.git/': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 
+```
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
