@@ -1,3 +1,5 @@
+
+/* 项目测试时使用,开发用不到,删除 */
 import { render, screen } from '@testing-library/react';
 import App from './App';
 

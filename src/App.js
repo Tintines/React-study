@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react'
+import './app.css'
+import Add from './components/add/Add.jsx'
+import List from './components/list/List.jsx'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+    render(){
+        return (
+            <div>
+                {/* class 要换成 className */}
+                <header className="site-header jumbotron">
+                    <div className="container">
+                        <div className="row">
+                        <div className="col-xs-12">
+                            <h1>请发表对React的评论</h1>
+                        </div>
+                        </div>
+                    </div>
+                </header>
+                <div className="container">
+                    {/* Add */}
+                    <Add/>
+                    {/* List */}
+                    <List/>
+                    
+                </div>
+            </div>
+        )
+    }
 }
-
-export default App;
