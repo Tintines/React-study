@@ -7,12 +7,14 @@ cd hello-react
 npm start
 ```
 
-* jsx文件中标签必须要闭合, 常见错误未闭合标签 input 
+react中需要先import 引入文件夹中图片??
+* jsx文件中标签必须要闭合, 常见错误未闭合标签 input br hr
 * jsx语法 使用className= 全局查找替换class=
 * style标签双括号 style={{display:'none'}}
 * 在a标签中临时改成锚点 href='#1'
 * 成型的第三方库 要放到public中
 * img标签中要有alt属性
+jsx中的换行不会被解析成一个空格生成间距,使用&nbsp;来实现空格!!!而普通HTML中换行符有影响
 
 a.遇到 <开头的代码, 以标签的语法解析: html同名标签转换为html同名元素, 其它标签需要特别解析
 b.遇到以 { 开头的代码，以JS语法解析: 标签中的js表达式必须用{ }包含
@@ -44,3 +46,11 @@ fatal: unable to access 'https://github.com/Tintines/React-study.git/': LibreSSL
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
+
+### 使用消息订阅(subscribe)-发布(publish)机制
+工具库: PubSubJS
+下载: npm install pubsub-js --save
+使用: 
+   import PubSub from 'pubsub-js'                    //引入
+   PubSub.subscribe('delete', function(data){ });   //订阅
+   PubSub.publish('delete', data)                       //发布消息
