@@ -54,3 +54,9 @@ git config --global --unset https.proxy
    import PubSub from 'pubsub-js'                    //引入
    PubSub.subscribe('delete', function(data){ });   //订阅
    PubSub.publish('delete', data)                       //发布消息
+
+
+## <!-- 解决路由中出现多个/ 如/home/haha 导致样式丢失的问题,方法一去掉引入外部样式时最前面的那个小点 -->
+    <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
+    <!-- 方法二使用 %PUBLIC_URL% -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/bootstrap.css">

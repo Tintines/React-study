@@ -4,7 +4,11 @@
     <meta charset="utf-8" />
     <!-- %PUBLIC_URL% 代表当前路径,仅仅是适用于react -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="stylesheet" href="./css/bootstrap.css">
+
+    <!-- 解决路由中出现多个/ 如/home/haha 导致样式丢失的问题,方法一去掉引入外部样式时最前面的那个小点 -->
+    <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
+    <!-- 方法二使用 %PUBLIC_URL% -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/bootstrap.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- 只能更改安卓手机浏览器地址栏的颜色 -->
     <meta name="theme-color" content="#000000" />
@@ -19,6 +23,12 @@
     <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
     
     <title>React App</title>
+    <style>
+      .demo{
+        background-color: #bfa !important;
+        color: black !important;
+      }
+    </style>
   </head>
   <body>
     <!-- 当浏览器不支持JavaScript脚本时显示 -->
